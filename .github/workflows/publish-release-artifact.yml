@@ -17,7 +17,7 @@ jobs:
       - name: Set version
         id: set-version
         run: |
-          version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          version=1.0-beta-30
           echo "::set-output name=project-version::$version"
           echo "PROJECT_VERSION=$version" >> $GITHUB_ENV
       - run: echo $PROJECT_VERSION
